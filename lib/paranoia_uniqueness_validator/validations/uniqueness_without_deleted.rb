@@ -1,5 +1,5 @@
 module ParanoiaUniquenessValidator
-  module Valiations
+  module Validations
     class UniquenessWithoutDeletedValidator < ActiveRecord::Validations::UniquenessValidator
       def validate_each(record, attribute, value)
         finder_class = find_finder_class_for(record)
