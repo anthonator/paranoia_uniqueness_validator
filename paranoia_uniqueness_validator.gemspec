@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = ParanoiaUniquenessValidator::VERSION
   gem.authors       = ["Anthony Smith"]
   gem.email         = ["anthony@sticksnleaves.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Adds the validates_uniqueness_without_deleted validator to ignore deleted fields when validating for uniqueness.}
+  gem.summary       = %q{Validate unique fields without letting those pesky deleted records get in the way. Great for use with Paranoia.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
