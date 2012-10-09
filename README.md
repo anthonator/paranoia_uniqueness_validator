@@ -20,10 +20,16 @@ Or install it yourself as:
 
     $ gem install paranoia_uniqueness_validator
 
+## Configuration
+
+This validator supports all configuration options used by the base ActiveRecord uniqueness validator. For more information check out the [Rails API documentation](http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_uniqueness_of).
+
 ## Usage
 
 ```ruby
-
+class SomeModel < ActiveRecord::Base
+    validates :some_field, :uniqueness_without_deleted => true
+end
 ```
 
 ## Contributing
