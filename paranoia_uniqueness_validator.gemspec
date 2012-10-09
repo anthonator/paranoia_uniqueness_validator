@@ -23,5 +23,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "database_cleaner"
   gem.add_development_dependency "rails", "~> 3.0"
   gem.add_development_dependency "rspec-rails"
-  gem.add_development_dependency "sqlite3"
 end
