@@ -106,7 +106,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-jdbc-adapter
+  activerecord-jdbcsqlite3-adapter
   database_cleaner
+  jruby-openssl
   paranoia
   paranoia_uniqueness_validator!
   rails (~> 3.0)
