@@ -2,6 +2,8 @@
 
 TODO: Write a gem description
 
+[![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator)
+
 ## Installation
 
 Add this line to your application's Gemfile:
