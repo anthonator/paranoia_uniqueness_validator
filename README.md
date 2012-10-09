@@ -2,7 +2,7 @@
 
 TODO: Write a gem description
 
-[![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator)
+[![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator)
 
 ## Installation
 
