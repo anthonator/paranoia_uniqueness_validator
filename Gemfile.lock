@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paranoia_uniqueness_validator (0.0.1)
+    paranoia_uniqueness_validator (0.1.0)
       activerecord (~> 3.0)
 
 GEM
