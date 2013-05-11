@@ -9,15 +9,15 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009200838) do
+ActiveRecord::Schema.define(version: 20130511080827) do
 
-  create_table "dummy_models", :force => true do |t|
+  create_table "dummy_models", force: true do |t|
     t.string   "unique_field"
     t.datetime "deleted_at"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
