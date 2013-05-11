@@ -10,11 +10,11 @@ module ParanoiaUniquenessValidator
         relation = relation.and(table[finder_class.primary_key.to_sym].not_eq(record.id)) if record.persisted?
         relation = relation.and(table[:deleted_at].eq(nil))
         relation = scope_relation(record, table, relation)
-        relation = find_class.unscoped.where(relation)
+        relation = finder_class.unscoped.where(relation)
         relation = relation.merge(options[:conditions]) if options[:conditions]
 
         if relation.exists?
-          error_options = option.except(:case_sensitive, :scope, :conditions)
+          error_options = options.except(:case_sensitive, :scope, :conditions)
           error_options[:value] = value
 
           record.errors.add(attribute, :taken, error_options)
