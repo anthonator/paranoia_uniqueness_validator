@@ -9,9 +9,11 @@ This validator will ignore any record that has a non-null value for the deleted_
 ## Installation
 
 Add this line to your application's Gemfile:
+    # Rails 3
+    gem 'paranoia_uniqueness_validator', '0.1.0'
 
-    gem 'paranoia_uniqueness_validator'
-
+    # Rails 4
+    gem 'paranoia_uniqueness_validator, '1.0.0'
 And then execute:
 
     $ bundle
