@@ -49,4 +49,4 @@ end
 
 tilt-jbuilder is maintained and funded by [Sticksnleaves](http://www.sticksnleaves.com)
 
-Thanks to all of our [contributors](https://github.com/anthonator/tilt-jbuilder/graphs/contributors)
+Thanks to all of our [contributors](https://github.com/anthonator/paranoia_uniqueness_validator/graphs/contributors)
