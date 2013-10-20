@@ -4,7 +4,7 @@ Adds validator validates_uniqueness_without_deleted.
 
 This validator will ignore any record that has a non-null value for the deleted_at field. This gem was made specifically for use with the [Paranoia](https://github.com/radar/paranoia) gem but it can be used with any gem that uses the deleted_at field for marking records as deleted.
 
-[![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator)
+[![Gem Version](https://badge.fury.io/rb/paranoia_uniqueness_validator.png)](http://badge.fury.io/rb/paranoia_uniqueness_validator) [![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator) [![Dependency Status](https://gemnasium.com/anthonator/paranoia_uniqueness_validator.png)](https://gemnasium.com/anthonator/paranoia_uniqueness_validator) [![Code Climate](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator.png)](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator)
 
 ## Installation
 
