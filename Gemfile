@@ -11,3 +11,9 @@ end
 platforms :ruby do
   gem "sqlite3"
 end
+
+group :development do
+  gem 'bundler'
+  gem 'coveralls', :require => false
+  gem 'rake'
+end
