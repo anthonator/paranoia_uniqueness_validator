@@ -47,6 +47,6 @@ end
 
 [![Sticksnleaves](http://sticksnleaves-wordpress.herokuapp.com/wp-content/themes/sticksnleaves/images/snl-logo-116x116.png)](http://www.sticksnleaves.com)
 
-tilt-jbuilder is maintained and funded by [Sticksnleaves](http://www.sticksnleaves.com)
+paranoia_uniqueness_validator is maintained and funded by [Sticksnleaves](http://www.sticksnleaves.com)
 
 Thanks to all of our [contributors](https://github.com/anthonator/paranoia_uniqueness_validator/graphs/contributors)
