@@ -12,6 +12,14 @@ platforms :ruby do
   gem "sqlite3"
 end
 
+platforms :rbx do
+  gem 'psych'
+  gem 'racc'
+  gem 'rubinius-coverage'
+  gem 'rubysl'
+  gem 'rubysl-test-unit'
+end
+
 group :development do
   gem 'bundler'
   gem 'coveralls', :require => false
