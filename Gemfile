@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 platforms :jruby do
-  gem "activerecord-jdbcsqlite3-adapter", :git => "git://github.com/jruby/activerecord-jdbc-adapter.git"
+  gem "activerecord-jdbcsqlite3-adapter"
   gem "jruby-openssl"
 end
 
