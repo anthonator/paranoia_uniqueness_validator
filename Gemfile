@@ -10,14 +10,15 @@ end
 
 platforms :ruby do
   gem "sqlite3"
+  gem "test-unit"
 end
 
 platforms :rbx do
-  gem 'psych'
-  gem 'racc'
-  gem 'rubinius-coverage'
-  gem 'rubysl'
-  gem 'rubysl-test-unit'
+  #gem 'psych'
+  #gem 'racc'
+  #gem 'rubinius-coverage'
+  #gem 'rubysl'
+  #gem 'rubysl-test-unit'
 end
 
 group :development do
