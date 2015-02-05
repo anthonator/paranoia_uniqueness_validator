@@ -1,4 +1,4 @@
-# ParanoiaUniquenessValidator [![endorse](http://api.coderwall.com/anthonator/endorsecount.png)](http://coderwall.com/anthonator)
+# ParanoiaUniquenessValidator
 
 Adds validator validates_uniqueness_without_deleted.
 
