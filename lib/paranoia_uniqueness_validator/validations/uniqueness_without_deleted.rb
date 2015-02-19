@@ -4,7 +4,12 @@ module ParanoiaUniquenessValidator
       def validate_each(record, attribute, value)
         finder_class = find_finder_class_for(record)
         table = finder_class.arel_table
-        value = deserialize_attribute(record, attribute, value)
+
+        if ActiveRecord.version.to_s >= '4.2.0'
+          value = map_enum_attribute(finder_class, attribute, value)
+        else
+          value = deserialize_attribute(record, attribute, value)
+        end
 
         relation = build_relation(finder_class, table, attribute, value)
         relation = relation.and(table[finder_class.primary_key.to_sym].not_eq(record.id)) if record.persisted?
