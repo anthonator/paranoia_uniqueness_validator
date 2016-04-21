@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130511080827) do
+ActiveRecord::Schema.define(version: 20160421194241) do
 
-  create_table "dummy_models", force: true do |t|
-    t.string   "unique_field"
+  create_table "dummy_models", force: :cascade do |t|
+    t.string   "unique_field", limit: 255
     t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dummy_non_nil_models", force: :cascade do |t|
+    t.string   "unique_field"
+    t.datetime "deleted_at",   default: '0000-01-01 00:00:00', null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
