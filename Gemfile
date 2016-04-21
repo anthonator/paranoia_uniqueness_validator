@@ -26,6 +26,10 @@ platforms :ruby do
   gem "test-unit"
 end
 
+platforms :ruby_19 do
+  gem "mime-types", "< 3.0"
+end
+
 platforms :rbx do
   #gem 'psych'
   #gem 'racc'
