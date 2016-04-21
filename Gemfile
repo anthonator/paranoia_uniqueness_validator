@@ -26,7 +26,7 @@ platforms :ruby do
   gem "test-unit"
 end
 
-platforms :ruby_19 do
+platforms :ruby_19, :jruby_19 do
   gem "mime-types", "< 3.0"
 end
 
