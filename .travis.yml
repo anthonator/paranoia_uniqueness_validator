@@ -12,8 +12,10 @@ env:
   - "RAILS_VERSION=4.0.0"
   - "RAILS_VERSION=4.1.0"
   - "RAILS_VERSION=4.2.0"
+  - "RAILS_VERSION=5.0.0.beta4"
 matrix:
   allow_failures:
     - rvm: ruby-head
     - rvm: jruby-head
+    - env: RAILS_VERSION=5.0.0.beta4
 sudo: false
