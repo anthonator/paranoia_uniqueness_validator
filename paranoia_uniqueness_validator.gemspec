@@ -17,9 +17,9 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "activerecord", ">= 4.0.0"
+  gem.add_dependency "activerecord", ">= 4.0.0", "< 5.1"
 
-  gem.add_development_dependency "paranoia"
+  gem.add_development_dependency "paranoia", "2.2.0pre"
   gem.add_development_dependency "database_cleaner"
   gem.add_development_dependency "rspec-rails"
 end
