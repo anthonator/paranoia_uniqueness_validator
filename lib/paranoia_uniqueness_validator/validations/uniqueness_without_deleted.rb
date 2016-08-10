@@ -16,10 +16,10 @@ module ParanoiaUniquenessValidator
 
         default_sentinel_value = Object.const_defined?('Paranoia') ? Paranoia.default_sentinel_value : nil
 
-        relation = relation.and(table[:deleted_at].eq(default_sentinel_value))
+        relation = relation.where(table[:deleted_at].eq(default_sentinel_value).to_sql)
 
         relation = scope_relation(record, table, relation)
-        relation = finder_class.unscoped.where(relation)
+        relation = finder_class.unscoped.where(relation.where_values_hash)
         relation = relation.merge(options[:conditions]) if options[:conditions]
 
         if relation.exists?
