@@ -12,14 +12,26 @@ module ParanoiaUniquenessValidator
         end
 
         relation = build_relation(finder_class, table, attribute, value)
-        relation = relation.and(table[finder_class.primary_key.to_sym].not_eq(record.id)) if record.persisted?
-
+        if ActiveRecord.version.to_s >= '5.0.0'
+          relation = relation.where(table[finder_class.primary_key.to_sym].not_eq(record.id)) if record.persisted?
+        else
+          relation = relation.and(table[finder_class.primary_key.to_sym].not_eq(record.id)) if record.persisted?
+        end
         default_sentinel_value = Object.const_defined?('Paranoia') ? Paranoia.default_sentinel_value : nil
 
-        relation = relation.and(table[:deleted_at].eq(default_sentinel_value))
+        if ActiveRecord.version.to_s >= '5.0.0'
+          relation = relation.where(table[:deleted_at].eq(default_sentinel_value))
+        else
+          relation = relation.and(table[:deleted_at].eq(default_sentinel_value))
+        end
 
         relation = scope_relation(record, table, relation)
-        relation = finder_class.unscoped.where(relation)
+
+        if ActiveRecord.version.to_s >= '5.0.0'
+          relation = finder_class.unscoped.merge(relation)
+        else
+          relation = finder_class.unscoped.where(relation)
+        end
         relation = relation.merge(options[:conditions]) if options[:conditions]
 
         if relation.exists?
