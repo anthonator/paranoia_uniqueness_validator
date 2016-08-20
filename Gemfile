@@ -6,10 +6,11 @@ gemspec
 rails_version = ENV['RAILS_VERSION'] || 'default'
 
 rails = case rails_version
+
 when 'master'
   { github: 'rails/rails' }
 when 'default'
-  '>= 4.2.0'
+  '>= 5.0.0'
 else
   "~> #{rails_version}"
 end
@@ -30,16 +31,9 @@ platforms :ruby_19, :jruby_19 do
   gem "mime-types", "< 3.0"
 end
 
-platforms :rbx do
-  #gem 'psych'
-  #gem 'racc'
-  #gem 'rubinius-coverage'
-  #gem 'rubysl'
-  #gem 'rubysl-test-unit'
-end
-
 group :development do
   gem 'bundler'
   gem 'coveralls', :require => false
+  gem 'listen'
   gem 'rake'
 end
