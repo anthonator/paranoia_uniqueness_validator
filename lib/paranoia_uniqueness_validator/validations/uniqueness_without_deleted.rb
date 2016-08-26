@@ -4,23 +4,26 @@ module ParanoiaUniquenessValidator
       def validate_each(record, attribute, value)
         finder_class = find_finder_class_for(record)
         table = finder_class.arel_table
-
-        if ActiveRecord.version.to_s >= '4.2.0'
-          value = map_enum_attribute(finder_class, attribute, value)
-        else
-          value = deserialize_attribute(record, attribute, value)
-        end
+        value = map_enum_attribute(finder_class, attribute, value)
 
         relation = build_relation(finder_class, table, attribute, value)
-        relation = relation.and(table[finder_class.primary_key.to_sym].not_eq(record.id)) if record.persisted?
-
-        default_sentinel_value = Object.const_defined?('Paranoia') ? Paranoia.default_sentinel_value : nil
-
-        relation = relation.and(table[:deleted_at].eq(default_sentinel_value))
-
+        if record.persisted?
+          if finder_class.primary_key
+            relation = relation.where.not(finder_class.primary_key => record.id_was || record.id)
+          else
+            raise UnknownPrimaryKey.new(finder_class, "Can not validate uniqueness for persisted record without primary key.")
+          end
+        end
         relation = scope_relation(record, table, relation)
-        relation = finder_class.unscoped.where(relation)
         relation = relation.merge(options[:conditions]) if options[:conditions]
+
+        if defined?('Paranoia') && Paranoia.respond_to?(:default_sentinel_value)
+          sentinel_value = Paranoia.default_sentinel_value
+        else
+          sentinel_value = nil
+        end
+
+        relation = relation.where(deleted_at: sentinel_value)
 
         if relation.exists?
           error_options = options.except(:case_sensitive, :scope, :conditions)

@@ -15,6 +15,10 @@ Add this line to your application's Gemfile:
 
     # Rails 4
     gem 'paranoia_uniqueness_validator', '1.1.0'
+
+    # Rails 5
+    gem 'paranoia_uniqueness_validator', '2.0.0'
+    
 And then execute:
 
     $ bundle

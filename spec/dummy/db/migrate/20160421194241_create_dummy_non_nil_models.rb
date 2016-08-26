@@ -1,4 +1,4 @@
-class CreateDummyNonNilModels < ActiveRecord::Migration
+class CreateDummyNonNilModels < ActiveRecord::Migration[5.0]
   def change
     create_table :dummy_non_nil_models do |t|
       t.string   :unique_field

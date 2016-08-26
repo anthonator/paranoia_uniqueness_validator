@@ -1,0 +1,11 @@
+version: '2'
+services:
+  lib:
+    build: .
+    command: rspec
+    volumes:
+      - .:/usr/src/app
+      - lib.volume:/usr/local/bundle
+volumes:
+  lib.volume:
+    driver: local
