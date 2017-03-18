@@ -2,12 +2,14 @@ language: ruby
 rvm:
   - 2.2.5
   - 2.3.0
+  - 2.4.0
   - ruby-head
   - jruby-head
 env:
   - "RAILS_VERSION=master"
   - "RAILS_VERSION=5.0.0"
   - "RAILS_VERSION=5.0.0.1"
+  - "RAILS_VERSION=5.0.2"
 matrix:
   allow_failures:
     - rvm: ruby-head
