@@ -32,14 +32,15 @@ describe ParanoiaUniquenessValidator::Validations::UniquenessWithoutDeletedValid
 
     it "should validate uniqueness" do
       DummyNonNilModel.create(:unique_field => "unique")
-      DummyNonNilModel.new(:unique_field => "unique").should_not be_valid
+
+      expect(DummyNonNilModel.new(:unique_field => "unique")).to_not be_valid
     end
 
     it "should should be valid if not unique with a deleted record" do
       dummy_model = DummyNonNilModel.create(:unique_field => "unique")
       dummy_model.destroy
       dummy_model = DummyNonNilModel.new(:unique_field => "unique")
-      dummy_model.should be_valid
+      expect(dummy_model).to be_valid
     end
 
   end

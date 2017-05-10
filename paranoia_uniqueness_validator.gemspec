@@ -10,16 +10,16 @@ Gem::Specification.new do |gem|
   gem.email         = ["anthony@sticksnleaves.com"]
   gem.description   = %q{Adds the validates_uniqueness_without_deleted validator to ignore deleted fields when validating for uniqueness.}
   gem.summary       = %q{Validate unique fields without letting those pesky deleted records get in the way. Great for use with Paranoia.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/anthonator/paranoia_uniqueness_validator"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "activerecord", ">= 5.0.0", "< 5.1"
+  gem.add_dependency "activerecord", ">= 5.1.0", "< 5.2"
 
-  gem.add_development_dependency "paranoia"
-  gem.add_development_dependency "database_cleaner"
-  gem.add_development_dependency "rspec-rails"
+  gem.add_development_dependency "paranoia", "~> 2.3"
+  gem.add_development_dependency "database_cleaner", "~> 1.6"
+  gem.add_development_dependency "rspec-rails", "~> 3.6"
 end
