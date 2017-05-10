@@ -1,8 +1,8 @@
 version: '2'
 services:
   lib:
-    build: .
     command: rspec
+    image: sticksnleaves/ruby-project:2.4
     volumes:
       - .:/usr/src/app
       - lib.volume:/usr/local/bundle
