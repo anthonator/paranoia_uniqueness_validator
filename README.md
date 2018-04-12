@@ -1,8 +1,11 @@
 # ParanoiaUniquenessValidator
 
-Adds validator validates_uniqueness_without_deleted.
+Adds `validates_uniqueness_without_deleted`.
 
-This validator will ignore any record that has a non-null value for the deleted_at field. This gem was made specifically for use with the [Paranoia](https://github.com/radar/paranoia) gem but it can be used with any gem that uses the deleted_at field for marking records as deleted.
+This validator will ignore any record that has a non-null value for the
+`deleted_at` field. This gem was made specifically for use with the
+[Paranoia](https://github.com/radar/paranoia) gem but it can be used with any
+gem that uses the `deleted_at` field for marking records as deleted.
 
 [![Gem Version](https://badge.fury.io/rb/paranoia_uniqueness_validator.png)](http://badge.fury.io/rb/paranoia_uniqueness_validator) [![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator) [![Dependency Status](https://gemnasium.com/anthonator/paranoia_uniqueness_validator.png)](https://gemnasium.com/anthonator/paranoia_uniqueness_validator) [![Coverage Status](https://coveralls.io/repos/anthonator/paranoia_uniqueness_validator/badge.png)](https://coveralls.io/r/anthonator/paranoia_uniqueness_validator) [![Code Climate](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator.png)](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator)
 
@@ -32,13 +35,14 @@ Or install it yourself as:
 
 ## Configuration
 
-This validator supports all configuration options used by the base ActiveRecord uniqueness validator. For more information check out the [Rails API documentation](http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_uniqueness_of).
+This validator supports all configuration options used by the base ActiveRecord
+uniqueness validator. For more information check out the [Rails API documentation](http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_uniqueness_of).
 
 ## Usage
 
 ```ruby
 class SomeModel < ActiveRecord::Base
-    validates :some_field, :uniqueness_without_deleted => true
+  validates :some_field, uniqueness_without_deleted: true
 end
 ```
 
@@ -51,8 +55,6 @@ end
 5. Create new Pull Request
 
 ## Credits
-
-[![Sticksnleaves](http://sticksnleaves-wordpress.herokuapp.com/wp-content/themes/sticksnleaves/images/snl-logo-116x116.png)](http://www.sticksnleaves.com)
 
 paranoia_uniqueness_validator is maintained and funded by [Sticksnleaves](http://www.sticksnleaves.com)
 
