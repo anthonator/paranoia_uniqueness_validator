@@ -1,18 +1,16 @@
 language: ruby
 rvm:
-  - 2.2.5
-  - 2.3.0
-  - 2.4.0
-  - jruby-9.1.5.0
+  - 2.2.9
+  - 2.3.7
+  - 2.4.4
+  - 2.5.1
   - ruby-head
-  - jruby-head
 env:
   - "RAILS_VERSION=master"
   - "RAILS_VERSION=5.1.0"
+  - "RAILS_VERSION=5.2.0"
 matrix:
   allow_failures:
-    - rvm: jruby-9.1.5.0
     - rvm: ruby-head
-    - rvm: jruby-head
     - env: RAILS_VERSION=master
 sudo: false
