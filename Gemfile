@@ -18,7 +18,7 @@ end
 gem 'rails', rails
 
 platforms :jruby do
-  gem "activerecord-jdbcsqlite3-adapter", github: "jruby/activerecord-jdbc-adapter", branch: "rails-5"
+  gem "activerecord-jdbcsqlite3-adapter"
   gem "jruby-openssl"
 end
 
