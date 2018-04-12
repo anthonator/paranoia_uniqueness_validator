@@ -17,11 +17,9 @@ describe ParanoiaUniquenessValidator::Validations::UniquenessWithoutDeletedValid
 
       expect(DummyModel.new(:unique_field => "unique")).to be_valid
     end
-
   end
 
   context 'with datetime (non nil) default_sentinel_value' do
-
     before(:all) do
       if Paranoia.respond_to?(:default_sentinel_value)
         Paranoia.default_sentinel_value = DateTime.new(0)
@@ -42,7 +40,5 @@ describe ParanoiaUniquenessValidator::Validations::UniquenessWithoutDeletedValid
       dummy_model = DummyNonNilModel.new(:unique_field => "unique")
       expect(dummy_model).to be_valid
     end
-
   end
-
 end
