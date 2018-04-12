@@ -22,8 +22,8 @@ Add this line to your application's Gemfile:
     # Rails 5.0
     gem 'paranoia_uniqueness_validator', '2.0.0'
 
-    # Rails 5.1
-    gem 'paranoia_uniqueness_validator', '3.0.0'
+    # Rails 5.1+
+    gem 'paranoia_uniqueness_validator', '3.1.0'
 
 And then execute:
 
@@ -56,6 +56,6 @@ end
 
 ## Credits
 
-paranoia_uniqueness_validator is maintained and funded by [Sticksnleaves](http://www.sticksnleaves.com)
+`paranoia_uniqueness_validator` is maintained and funded by [Sticksnleaves](http://www.sticksnleaves.com)
 
 Thanks to all of our [contributors](https://github.com/anthonator/paranoia_uniqueness_validator/graphs/contributors)
