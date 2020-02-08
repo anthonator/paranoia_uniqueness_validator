@@ -22,6 +22,6 @@ group :development do
   gem 'coveralls', require: false
   gem 'listen'
   gem 'rake'
-  gem "sqlite3"
-  gem "test-unit"
+  gem 'sqlite3'
+  gem 'test-unit'
 end
