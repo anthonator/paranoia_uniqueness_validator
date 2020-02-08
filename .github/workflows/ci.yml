@@ -18,6 +18,12 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
 
+      - name: Run apt-get update
+        run: apt-get update
+
+      - name: Run apt-get install build-essential
+        run: apt-get install build-essential
+
       - name: Run gem install bundler
         run: gem install bundler
 
