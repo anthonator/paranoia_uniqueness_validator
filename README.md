@@ -7,7 +7,7 @@ This validator will ignore any record that has a non-null value for the
 [Paranoia](https://github.com/radar/paranoia) gem but it can be used with any
 gem that uses the `deleted_at` field for marking records as deleted.
 
-[![Gem Version](https://badge.fury.io/rb/paranoia_uniqueness_validator.png)](http://badge.fury.io/rb/paranoia_uniqueness_validator) [![Build Status](https://secure.travis-ci.org/anthonator/paranoia_uniqueness_validator.png)](http://travis-ci.org/anthonator/paranoia_uniqueness_validator) [![Coverage Status](https://coveralls.io/repos/anthonator/paranoia_uniqueness_validator/badge.png)](https://coveralls.io/r/anthonator/paranoia_uniqueness_validator) [![Code Climate](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator.png)](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator)
+[![Gem Version](https://badge.fury.io/rb/paranoia_uniqueness_validator.png)](http://badge.fury.io/rb/paranoia_uniqueness_validator) ![ci](https://github.com/anthonator/paranoia_uniqueness_validator/workflows/ci/badge.svg) [![Coverage Status](https://coveralls.io/repos/anthonator/paranoia_uniqueness_validator/badge.png)](https://coveralls.io/r/anthonator/paranoia_uniqueness_validator) [![Code Climate](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator.png)](https://codeclimate.com/github/anthonator/paranoia_uniqueness_validator)
 
 ## Installation
 
