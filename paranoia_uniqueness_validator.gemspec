@@ -6,6 +6,7 @@ require 'paranoia_uniqueness_validator/version'
 Gem::Specification.new do |gem|
   gem.name          = "paranoia_uniqueness_validator"
   gem.version       = ParanoiaUniquenessValidator::VERSION
+  gem.licenses      = ['MIT']
   gem.authors       = ["Anthony Smith"]
   gem.email         = ["anthony@sticksnleaves.com"]
   gem.description   = %q{Adds the validates_uniqueness_without_deleted validator to ignore deleted fields when validating for uniqueness.}
