@@ -1,0 +1,29 @@
+name: ci
+
+on: push
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        rails: ['6.0', '5.2']
+        ruby: ['2.5', '2.6', '2.7']
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Run bundle install
+        env:
+          RAILS_VERSION: ${{ matrix.rails }}
+        run: bundle install
+
+      - name: Run bundle exec rspec
+        env:
+          RAILS_VERSION: ${{ matrix.rails }}
+        run: bundle exec rspec
