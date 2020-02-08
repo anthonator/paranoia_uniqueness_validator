@@ -18,6 +18,9 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
 
+      - name: Run gem install bundler
+        run: gem install bundler
+
       - name: Run bundle install
         env:
           RAILS_VERSION: ${{ matrix.rails }}
