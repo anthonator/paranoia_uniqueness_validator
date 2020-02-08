@@ -22,7 +22,7 @@ jobs:
         run: |
           sudo apt-get update
 
-          sudo apt-get install build-essential libsqlite3-devel
+          sudo apt-get install build-essential libsqlite3-dev
 
       - name: Run gem install bundler
         run: gem install bundler
