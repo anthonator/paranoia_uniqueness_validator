@@ -26,7 +26,7 @@ Add this line to your application's Gemfile:
     gem 'paranoia_uniqueness_validator', '3.1.0'
 
     # Rails 6
-    gem 'paranoia_uniqueness_validator', '3.2.0'
+    gem 'paranoia_uniqueness_validator', '3.3.0'
 
 And then execute:
 
