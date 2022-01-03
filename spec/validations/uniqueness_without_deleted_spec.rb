@@ -3,7 +3,6 @@ require 'paranoia'
 
 
 describe ParanoiaUniquenessValidator::Validations::UniquenessWithoutDeletedValidator do
-
   context 'with nil default_sentinel_value' do
     it "should validate uniqueness" do
       DummyModel.create(:unique_field => "unique")
