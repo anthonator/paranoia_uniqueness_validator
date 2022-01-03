@@ -6,9 +6,9 @@ jobs:
     test:
         strategy:
             matrix:
-                rails: [7.x, 6.x, 5.2.x]
+                rails: ['7.0', '6.1', '6.0', '5.2']
 
-                ruby: [2.6.x, 2.7.x, 3.0.x, 3.1.x]
+                ruby: ['2.6', '2.7', '3.0', '3.1']
 
                 exclude:
                     - rails: 7.x
