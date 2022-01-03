@@ -1,0 +1,12 @@
+version: 2
+
+updates:
+    - directory: /
+
+      package-ecosystem: bundler
+
+      schedule:
+          interval: daily
+
+      target-branch: main
+      
