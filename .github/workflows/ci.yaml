@@ -1,0 +1,79 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+    test:
+        strategy:
+            matrix:
+                rails: [7.x, 6.x, 5.2.x]
+
+                ruby: [2.6.x, 2.7.x, 2.8.x, 3.0.x, 3.1.x]
+
+                exclude:
+                    - rails: 7.x
+                    
+                      ruby: 2.6.x
+
+                    - rails: 6.0.x
+
+                      ruby: 3.0.x
+
+                    - rails: 6.0.x
+
+                      ruby: 3.1.x
+
+                    - rails: 5.2.x
+
+                      ruby: 2.7.x
+
+                    - rails: 5.2.x
+
+                      ruby: 2.8.x
+
+                    - rails: 5.2.x
+
+                      ruby: 3.0.x
+
+                    - rails: 5.2.x
+
+                      ruby: 3.1.x
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: ruby/setup-ruby@v1
+            
+              with:
+                  ruby-version: ${{ matrix.ruby }}
+
+            - name: Install toolchain
+
+              run: |
+                  sudo apt-get update
+
+                  sudo apt-get install \
+                    build-essential \
+                    libsqlite3-dev
+
+            - name: Install bundler
+
+              run: gem install bundler
+
+            - env:
+                  RAILS_VERSION: ${{ matrix.rails }}
+            
+              name: Install dependencies
+
+              run: bundle install
+
+            - env:
+                  RAILS_VERSION: ${{ matrix.rails }}
+
+              name: Test
+
+              run: bundle exec rspec
+
+                
