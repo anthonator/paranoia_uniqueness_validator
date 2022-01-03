@@ -21,6 +21,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency "activerecord", ">= 5.1.0", "< 7.1"
 
   gem.add_development_dependency "paranoia", "~> 2.3"
-  gem.add_development_dependency "database_cleaner", "~> 1.6"
+  gem.add_development_dependency "database_cleaner", "~> 2.0"
   gem.add_development_dependency "rspec-rails", "~> 5.0"
 end
