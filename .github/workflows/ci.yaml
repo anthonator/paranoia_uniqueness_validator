@@ -4,6 +4,9 @@ on: [push, pull_request]
 
 jobs:
     test:
+        if: github.actor != 'dependabot' && github.event_name == 'push' ||
+            github.event_name == 'pull_request'
+
         strategy:
             matrix:
                 rails: ['5.2', '6.0', '6.1', '7.0', 'master']
