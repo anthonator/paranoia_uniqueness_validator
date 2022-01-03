@@ -10,7 +10,7 @@ rails =
   when 'master'
     { github: 'rails/rails' }
   when 'default'
-    '>= 6.1.0'
+    '>= 7.0'
   else
     "~> #{rails_version}"
   end
