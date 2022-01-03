@@ -8,7 +8,7 @@ jobs:
             matrix:
                 rails: [7.x, 6.x, 5.2.x]
 
-                ruby: [2.6.x, 2.7.x, 2.8.x, 3.0.x, 3.1.x]
+                ruby: [2.6.x, 2.7.x, 3.0.x, 3.1.x]
 
                 exclude:
                     - rails: 7.x
@@ -26,10 +26,6 @@ jobs:
                     - rails: 5.2.x
 
                       ruby: 2.7.x
-
-                    - rails: 5.2.x
-
-                      ruby: 2.8.x
 
                     - rails: 5.2.x
 
