@@ -11,29 +11,29 @@ jobs:
                 ruby: ['2.6', '2.7', '3.0', '3.1']
 
                 exclude:
-                    - rails: 7.x
+                    - rails: '7.0'
                     
-                      ruby: 2.6.x
+                      ruby: '2.6'
 
-                    - rails: 6.0.x
+                    - rails: '6.0'
 
-                      ruby: 3.0.x
+                      ruby: '3.0'
 
-                    - rails: 6.0.x
+                    - rails: '6.0'
 
-                      ruby: 3.1.x
+                      ruby: '3.1'
 
-                    - rails: 5.2.x
+                    - rails: '5.2'
 
-                      ruby: 2.7.x
+                      ruby: '2.7'
 
-                    - rails: 5.2.x
+                    - rails: '5.2'
 
-                      ruby: 3.0.x
+                      ruby: '3.0'
 
-                    - rails: 5.2.x
+                    - rails: '5.2'
 
-                      ruby: 3.1.x
+                      ruby: '3.1'
 
         runs-on: ubuntu-latest
 
