@@ -28,6 +28,9 @@ Add this line to your application's Gemfile:
     # Rails 6
     gem 'paranoia_uniqueness_validator', '3.3.0'
 
+    # Rails 7
+    gem 'paranoia_uniqueness_validator', '3.4.0'
+
 And then execute:
 
     $ bundle
