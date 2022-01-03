@@ -6,7 +6,7 @@ jobs:
     test:
         strategy:
             matrix:
-                rails: ['7.0', '6.1', '6.0', '5.2']
+                rails: ['5.2', '6.0', '6.1', '7.0', 'master']
 
                 ruby: ['2.6', '2.7', '3.0', '3.1']
 
@@ -14,6 +14,10 @@ jobs:
                     - rails: '7.0'
                     
                       ruby: '2.6'
+
+                    - rails: '7.0'
+                    
+                      ruby: '3.1'
 
                     - rails: '6.0'
 
