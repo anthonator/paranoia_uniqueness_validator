@@ -22,5 +22,5 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "paranoia", "~> 2.3"
   gem.add_development_dependency "database_cleaner", "~> 2.0"
-  gem.add_development_dependency "rspec-rails", "~> 5.0"
+  gem.add_development_dependency "rspec-rails", "~> 6.0"
 end
