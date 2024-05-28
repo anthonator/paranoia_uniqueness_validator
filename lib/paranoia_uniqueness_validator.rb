@@ -5,6 +5,6 @@ module ParanoiaUniquenessValidator
 
 end
 
-class ActiveRecord::Base
+ActiveSupport.on_load(:active_record) do
   include ParanoiaUniquenessValidator::Validations
 end
