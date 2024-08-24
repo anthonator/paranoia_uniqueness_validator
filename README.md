@@ -13,10 +13,7 @@ gem that uses the `deleted_at` field for marking records as deleted.
 
 Add this line to your application's Gemfile:
 
-    # Rails 6.1
-    gem 'paranoia_uniqueness_validator', '3.3.0'
-
-    # Rails 7
+    # Rails 7.0
     gem 'paranoia_uniqueness_validator', '3.4.0'
 
     # Rails 7.1
