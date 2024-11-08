@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.required_ruby_version = '>= 3.1'
 
-  gem.add_dependency 'activerecord', '>= 7.0', '< 7.3'
+  gem.add_dependency 'activerecord', '>= 7.0', '< 8.1'
 
   gem.add_development_dependency 'database_cleaner', '~> 2.0'
   gem.add_development_dependency 'paranoia', '~> 3.0'
