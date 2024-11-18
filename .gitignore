@@ -12,3 +12,4 @@ coverage
 .ruby-version
 .gems/
 .DS_Store
+*.gem
